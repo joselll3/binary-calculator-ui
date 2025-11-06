@@ -1,0 +1,70 @@
+.calculator-container {
+  max-width: 360px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.calculator-container h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: #1976d2;
+}
+
+.calculator-container label {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.calculator-container input,
+.calculator-container select {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.calculator-container input:focus,
+.calculator-container select:focus {
+  border-color: #1976d2;
+  outline: none;
+  box-shadow: 0 0 5px rgba(25, 118, 210, 0.3);
+}
+
+.calculator-container button {
+  width: 100%;
+  padding: 0.6rem;
+  border: none;
+  background-color: #1976d2;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.calculator-container button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.calculator-container button:hover:not(:disabled) {
+  background-color: #115293;
+}
+
+.calculator-container div[style*="color:red"] {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
