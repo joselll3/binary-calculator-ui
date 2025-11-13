@@ -60,3 +60,43 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Agregar cucumber
+Se recomienda para hacer pruebas end-to-end en Angular integrar Cucumber con Cypress mediante un procesador de Gherkin
+```bash
+npm install --save-dev cypress @badeball/cypress-cucumber-preprocessor @bahmutov/cypress-esbuild-preprocessor esbuild
+```
+Para scripts que arranquen test y aplicación en un solo comando:
+```bash
+npm install --save-dev start-server-and-test
+```
+
+## Ejecutar Cucumber.
+En primer lugar es necesario iniciar la aplicación 
+```bash
+npm run start
+```
+Podemos ejecutar cypress en modo interactivo:
+
+```bash
+npx cypress open
+```
+- Permite seleccionar que test ejecutar manualmente.
+- Se puede ver ejecutar los test paso a paso con animaciones y el navegador abierto
+- Util para desarrollo y depuracion. Se puede inspeccionar el DOM, hacer console.log y detener la ejecucion en cualquier paso.
+- Soporta time travel. Ver en cada momento el estado del DOM.
+- Elegir navegador etc
+
+Podemos ejecutar cypress en modo headless (sin interfaz):
+
+```bash
+npx cypress run
+```
+```bash
+npx cypress run --browser chrome
+```
+- Ejecuta todos los test automáticamente, sin abrir GUI
+- Ideal para integración contínua (CI/CD)
+- Se puede elegir navegador con --browser (por defecto usa Electron)
+- Genera reportes en consola, opcionalmente archivos de video o capturas de pantalla.
+- No permite iteracción paso a paso, todo se ejecuta de forma automática

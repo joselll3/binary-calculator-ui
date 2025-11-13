@@ -1,0 +1,10 @@
+{
+    // Rutas a los step definitions de todos los contextos
+    "cucumberautocomplete.steps": [
+        "cypress/e2e/**/*.ts",
+    ],
+    "cucumberautocomplete.strictGherkinCompletion": true,
+    "cucumberautocomplete.smartSnippets": true,
+    "cucumberautocomplete.syncfeatures": "cypress/e2e/**/*.feature",
+
+}
